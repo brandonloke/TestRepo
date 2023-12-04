@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Magic Music Mapper</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+
+  </head>
+  
+      <!-- Header -->
+  <div id="header">
+    <h3 id="MMM">Magic Music Mapper</h3>
+    <h3 id="counter"> Songs Discovered: {{ number }}</h3>
+    
+	<!-- Inner -->
+	<div class="inner">
+	  <header>
+	    <center>
+          <h1>Rediscover your music with AI</h1>
+	      <h2><br>Share a glimpse of your day and unveil a personalized
+		Spotify playlist<h2>
+	  </header>
+	  <footer>
+	    <form action="/submit" method="post">
+	      <p>
+		<label for="moodfield"></label>
+		<input type="text" id="moodfield" name="mood">
+		<br><input type="submit" value="Click Me!">
+	      </p>
+	      <br><br><br><br><br>
+	  </form></center>
+	  </footer>
+	</div>
+
+	<!-- Navigation Bar -->
+	<nav id="nav">
+	  <ul>
+	    <li><a href="index.html">Home</a></li>
+	    <li><a href="#about">About</a></li>
+	  </ul>
+	</nav>
+
+	<!-- Banner -->
+	<section id="banner">
+	  <header>
+	    <h3 style="color: white; font-size: 50px;">Replay your magical moments</h3>
+	  </header>
+	</section>
+
+	<!-- Carousel -->
+	<div class="container">
+	  <div class="carousel-view">
+	    <button id="prev-btn" class="prev-btn"><</button>
+	    <div id="item-list" class="item-list">
+	      {% if mood %}
+	      {% for track in mood %}
+	      <iframe id="item" class="item" style="border-radius12px"
+		      src="https://open.spotify.com/embed/track/{{ track.uri }}"
+		      width="100%" height="200px" frameBorder="0"
+		      allowfullscreen="" allow="autoplay; clipboard-write;
+						encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+	      {% endfor %}
+	      {% else %}
+	      <p><center>No recommendations available.</center></p>
+	      {% endif %}
+	      <iframe id="item" class="item" style="border-radius12px"
+		      src="https://open.spotify.com/embed/track/{{ track.uri }}"
+		      width="100%" height="200px" frameBorder="0"
+		      allowfullscreen="" allow="autoplay; clipboard-write;
+						encrypted-media;
+						fullscreen; picture-in-picture"
+		      loading="lazy"></iframe>
+	      <iframe id="item" class="item" style="border-radius12px"
+		      src="https://open.spotify.com/embed/track/{{ track.uri }}"
+		      width="100%" height="200px" frameBorder="0"
+		      allowfullscreen="" allow="autoplay; clipboard-write;
+						encrypted-media;
+						fullscreen; picture-in-picture"
+		      loading="lazy"></iframe>
+	      <iframe id="item" class="item" style="border-radius12px"
+		      src="https://open.spotify.com/embed/track/{{ track.uri }}"
+		      width="100%" height="200px" frameBorder="0"
+		      allowfullscreen="" allow="autoplay; clipboard-write;
+						encrypted-media;
+						fullscreen; picture-in-picture"
+		      loading="lazy"></iframe>
+	      <iframe id="item" class="item" style="border-radius12px"
+		      src="https://open.spotify.com/embed/track/{{ track.uri }}"
+		      width="100%" height="200px" frameBorder="0"
+		      allowfullscreen="" allow="autoplay; clipboard-write;
+						encrypted-media;
+						fullscreen; picture-in-picture"
+		      loading="lazy"></iframe>
+	    </div>
+	    <button id="next-btn" class="next-btn">></button>
+	  </div>
+	</div>
+
+	<!-- About -->
+	<div class="about">
+	  <section id="about">
+	    <img src="logo.png" alt="Magic Music Mapper Logo"
+		 width="200" height = "200">
+	    <br><br>
+	  <header>
+	    <h3 style="color: white; font-size: 50px;">Magic Music Mapper</h3>
+	  </header>
+	  <br><br>
+	  <p>
+	    <strong>Magic Music Mapper</strong> is your personalized musical journey
+	    through emotions. Seamlessly blending technology and
+	    emotions, our innovative web application harnesses the power
+	    of your feelings to curate a bespoke Spotify playlist
+	    tailored just for you.
+	    <br><br>
+	    Unravel the sonic landscape of your emotions by simply sharing how you
+	    feel. Whether you're riding high on exuberance, seeking
+	    solace in tranquility, embracing nostalgia, or reveling in
+	    any emotion in between, <strong>Magic Music Mapper</strong> intuitively
+	    deciphers your mood and translates it into a handcrafted
+	    musical experience.
+	    <br><br>
+	    Powered by cutting-edge algorithms, our app discerns the intricate
+	    nuances of your emotions, translating them into a curated
+	    selection of tracks from Spotify's extensive library. Each
+	    playlist is a symphony of emotions, a musical portrayal
+	    designed to complement your current state of mind.
+	    <br><br>
+	    Discover new tunes that resonate with your feelings or rediscover old
+	    favorites in a whole new light. <strong>Magic Music Mapper</strong> is your
+	    gateway to a personalized musical voyage, synchronizing
+	    seamlessly with your emotional landscape, ensuring that
+	    every note resonates with your heartstrings.
+	    <br><br>
+	    Embrace the fusion of technology and sentiment with <strong>Magic Music
+	    Mapper</strong> and let the melodies seamlessly serenade your soul,
+	    transforming the way you experience music based on your
+	    ever-changing emotions.
+	  </p>
+	  </section>
+	</div>
+	
+	<script src="main.js"></script>
+  </body>
+</html>
