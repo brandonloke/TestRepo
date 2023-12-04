@@ -338,7 +338,7 @@ nav {
 
 	#banner {
 		text-align: center;
-		padding: 2.5em 0 2em 0;
+		padding: 3em 0 1em 0;
 		margin-bottom: 0;
 		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
 	}
@@ -388,9 +388,9 @@ nav {
 }
 
 .carousel-view .item-list {
-  max-width: 1700px;
+  max-width: 85em;
   width: 100vw;
-  padding: 0px 0px;
+  padding: 0em 0em;
   display: flex;
   gap: 20px; /* May need to be adjusted */
   scroll-behavior: smooth;
@@ -434,20 +434,12 @@ nav {
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-/* Hover effect for the elegant button */
+/* Hover effect button */
 .prev-btn:hover, .next-btn:hover {
   background-color: transparent;
   color: #df7366;
   border-color: #333333;
 }
-
-/* .item {
-  scroll-snap-align: center;
-  min-width: 120px;
-  height: 120px;
-  background-color: white;
-  border-radius:2px;
-} */
 
 .about {
   width: 100%;
