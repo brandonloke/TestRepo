@@ -369,6 +369,7 @@ nav {
   position: relative;
   /* width: 100%; */
   overflow-x: auto; /* Allows horizontal scrolling */
+  overflow-y: hidden;
   height: 30vh;
 /*  display: flex; */
   justify-content: center;
@@ -382,6 +383,7 @@ nav {
   align-items: center;
   gap: 10px;
   padding: 10px 10px;
+  overflow-y: hidden;
 /*  transition: all 0.25s ease-in; */
 }
 
@@ -396,6 +398,7 @@ nav {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   overflow-x: auto;
+  overflow-y: hidden;
  /*  scroll-snap-type: x mandatory; */
   background-color: transparent;
 }
@@ -406,6 +409,7 @@ nav {
   width: 300px; /* Adjust based on design */
   margin: 0 5px; /* Optional, for spacing between items */
   transition: transform 0.3s ease-in-out;
+  overflow-y: hidden;
 }
 
 /* .item {
@@ -434,6 +438,7 @@ nav {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  overflow-y: hidden;
 }
 
 /* Hover effect button */
@@ -445,8 +450,8 @@ nav {
 
 .about {
   width: 100%;
-/*  overflow-x: auto; */ /* Allows horizontal scrolling */
-  height: 100vh;
+  /*  overflow-x: auto; */ /* Allows horizontal scrolling */
+  height: auto;
 /*  display: flex; */
   justify-content: center;
   align-items: center;

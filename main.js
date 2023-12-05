@@ -2,10 +2,6 @@
     startScrolling;
 } */
 
-import smoothscroll from 'smoothscroll-polyfill';
-
-smoothscroll.polyfill();
-
 document.addEventListener('readystatechange', (event) => {
     if (document.readyState === 'complete') {
         startScrolling();
@@ -28,7 +24,7 @@ function startScrolling() {
     if (scrollingInterval) return; // Prevent multiple intervals
     scrollingInterval = setInterval(() => {
 	itemList.scrollLeft += scrollDirection * 10; // Adjust the scrolling speed as needed
-    }, 100); // Adjust the interval for smoother scrolling
+    }, 50); // Adjust the interval for smoother scrolling
 }
 
 /* function stopScrolling() {
